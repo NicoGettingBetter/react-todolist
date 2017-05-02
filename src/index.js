@@ -8,10 +8,8 @@ import './index.css';
 
 import appReducer from './reducers/index';
 
-const store = createStore(appReducer);
-
 ReactDOM.render(
-  <Provider store={store}>
+  <Provider store={createStore(appReducer)}>
     <App />
   </Provider>,
   document.getElementById('root')
